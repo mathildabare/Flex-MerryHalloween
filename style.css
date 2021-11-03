@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* 
+ * Typo
+ * **** */
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+
+
+/* 
+ * Input
+ * ***** */
+
+ .group 			  { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+  input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:15px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:300px; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+
+
+
+
+
+
+
+/* 
+ * Color
+ * ***** */
+
+ .bgc-gray {
+
+background-color: grey;
+ }
+
+
+/* 
+ * Flex
+ * **** */
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.flx-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+.w-100 {
+    width: 100%
+}
+
+.w-50 {
+    width: 50%
+}
+
+.switchsize {
+    width: 50%;
+}
+
+/* 
+ * Navbar
+ * ****** */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    padding: 0 10px;
+    height: 50px;
+
+}
+
+.Logo {
+    font-size: 1.3rem;
+    color: black;
+
+}
+
+ul>li {
+    display: inline-block;
+}
+
+/* 
+ * Header
+ * ****** */
+
+.Image {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background-image: url(fond.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 50px;
+}
+
+.ImageButtons {
+    width: 90px;
+    height: 60px;
+}
+
+.btn {
+    border: 2px solid black;
+    background-color: silver;
+    margin: 0 15px;
+    font-size: medium;
+}
+
+
+
+/* 
+ * Cards
+ * ***** */
+
+
+
+.AllCards {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Cards {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+
+.Card {
+    margin: 5px;
+    background-color: darkgray;
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+.Card>p {
+    font-size: 0.8rem;
+    color: black;
+    text-align: center;
+}
+
+.Card>h5 {
+    text-align: end;
+}
+
+
+
+
+/* 
+ * Contact
+ * ******* */
+
+
+
+.ContactBox {
+
+    justify-content: center;
+    flex-wrap: wrap;
+margin: 10px;
+}
+
+
+
+
+.SButton {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.SendButton {
+    width: 55px;
+    height: 20px;
+    font-size: small;
+    margin: 20px;
+}
+
+
+
+witchsize>input {
+    width: 100%;
+
+}
+
+.Container{
+
+    margin: 10%;
+}
+
+/* 
+ * @Media
+ * ****** */
+
+
+@media (max-width:900px) {
+    .AllCards {
+
+        flex-direction: column;
+    }
+
+    .MailName {
+
+        flex-direction: column;
+
+    }
+
+    .switchsize {
+        width: 100%;
+
+    }
+
+    .ContactBox {
+display: flex;
+        width: 100%;
+margin: auto;
+    }
+
+
+/* 
+ * Footer
+ * ****** */
+
+ .footer{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+
+/* 
+ * Container-1
+ * *********** */
+ 
+.Container1{
+
+    flex-wrap: wrap;
+    min-width: 200px;
+    min-height: 100px;
+    padding: 5px;
+}
+
+
+
+
+}
+
+ /* 
+ * Container-2
+ * *********** */
+
+ 
+
+
+.P1{
+
+    font-size: 10pt;
+    text-align: center;
+    margin: 5%;
+}
+
+.Cont{
+    margin: 5%;
+}
+
+
+.AllIcons{
+
+ justify-content: center;
+
+}
+
+.Icons{
+
+    text-align: center;
+    font-size: 25pt;
+    color: solid black;
+    margin: 0 10%;
+    
+}
+
+.Container>p{
+
+    text-align: center;
+
+}
+
+
+.Newsletter{
+
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-size: 10pt;
+
+}
+
+.Para{
+
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.AllCont{
+
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+
+}
+
+@media (max-width:900px) {
+    .AllCont {
+
+        flex-direction: column;
+    }
+
+.Asso{
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
